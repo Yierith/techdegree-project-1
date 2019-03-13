@@ -80,6 +80,7 @@ function printQuote(randomQuote){
   html += '</p>';
   // Get a random RGB Color from the getRandomRGBColor function and set the backgroundColor to it
   var randomBackgroundColor = getRandomRGBColor();
+  // Changing the backgroundcolor of the body style to randomBackGroundcolor
   document.body.style.backgroundColor = randomBackgroundColor;
   // Setting the innerHTML of the div with the ID 'quote-box' to the html string
   var quoteDiv = document.getElementById('quote-box').innerHTML = html;
