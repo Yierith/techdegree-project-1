@@ -14,9 +14,30 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
-
-
-
+var quotes = [
+  {
+    quote: "Remember that the happiest people are not those getting more, but those giving more.",
+    source: "H. Jackson Brown, Jr."
+  },
+  {
+    quote: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.",
+    source: "Steve Jobs",
+    citation: 'Stanford Commencement Address',
+    year: 2005
+  },
+  {
+    quote: "The successful warrior is the average man, with laser-like focus.",
+    source: "Bruce Lee"
+  },
+  {
+    quote: "You miss 100 percent of the shots you never take.",
+    source: "Wayne Gretzky"
+  },
+  {
+    quote: "The person who reads too much and uses his brain too little will fall into lazy habits of thinking.",
+    source: "Albert Einstein"
+  },
+];
 
 /***
   Create the `getRandomQuote` function to:
