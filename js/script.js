@@ -83,7 +83,7 @@ function printQuote(randomQuote){
   // Changing the backgroundcolor of the body style to randomBackGroundcolor
   document.body.style.backgroundColor = randomBackgroundColor;
   // Setting the innerHTML of the div with the ID 'quote-box' to the html string
-  var quoteDiv = document.getElementById('quote-box').innerHTML = html;
+  document.getElementById('quote-box').innerHTML = html;
 }
 
 // Randomly changing the Quote every 25 Seconds
