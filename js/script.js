@@ -2,7 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-var quotes = [
+const quotes = [
   {
     quote: "Remember that the happiest people are not those getting more, but those giving more.",
     source: "H. Jackson Brown, Jr.",
@@ -34,20 +34,20 @@ var quotes = [
 
 // Function to generate a random RGB Color
 function getRandomRGBColor(){
-  var maxValue = 256;
+  let maxValue = 256;
   // Generation random numbers betweet 0 and 256 for red, green and blue
-  var red = Math.floor(Math.random() * maxValue);
-  var green = Math.floor(Math.random() * maxValue);
-  var blue = Math.floor(Math.random() * maxValue);
+  let red = Math.floor(Math.random() * maxValue);
+  let green = Math.floor(Math.random() * maxValue);
+  let blue = Math.floor(Math.random() * maxValue);
   // Building the rgb() style for the html string
-  var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+  let rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
   // Return the rgbColor style string
   return rgbColor;
 }
 
 function getRandomQuote(quotes){
   // Create a random Number from 0 to the length of the quotes array.
-  var randomNumber = Math.floor(Math.random() * quotes.length);
+  let randomNumber = Math.floor(Math.random() * quotes.length);
   // Return a random quote from the quotes array with the index number of randomNumber
   return quotes[randomNumber];
 }
@@ -55,8 +55,8 @@ function getRandomQuote(quotes){
 
 function printQuote(randomQuote){
   // Get a random quote from the getRandomQuotes function and save it into the variable randomQuote
-  var randomQuote = getRandomQuote(quotes);
-  var html = '';
+  let randomQuote = getRandomQuote(quotes);
+  let html = '';
   // Adding the quote section to the html variable (concatening)
   html += '<p class="quote">' + randomQuote.quote + '</p>';
   // Adding the source section to the html variable (concatening)
@@ -79,7 +79,7 @@ function printQuote(randomQuote){
   // Closing the p tag of the html variable
   html += '</p>';
   // Get a random RGB Color from the getRandomRGBColor function and set the backgroundColor to it
-  var randomBackgroundColor = getRandomRGBColor();
+  let randomBackgroundColor = getRandomRGBColor();
   // Changing the backgroundcolor of the body style to randomBackGroundcolor
   document.body.style.backgroundColor = randomBackgroundColor;
   // Setting the innerHTML of the div with the ID 'quote-box' to the html string
@@ -89,7 +89,7 @@ function printQuote(randomQuote){
 // Randomly changing the Quote every 25 Seconds
 window.setInterval(printQuote, 25000);
 
-/*** 
+/***
 If the "Show another quote" button is clicked the event listener will be triggered
 and it will call the printQuote function to generate another random quote
 ***/
