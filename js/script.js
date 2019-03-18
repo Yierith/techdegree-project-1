@@ -47,7 +47,7 @@ function getRandomRGBColor(){
 
 function getRandomQuote(quotes){
   // Create a random Number from 0 to the length of the quotes array.
-  let randomNumber = Math.floor(Math.random() * quotes.length);
+  var randomNumber = Math.floor(Math.random() * quotes.length);
   // Return a random quote from the quotes array with the index number of randomNumber
   return quotes[randomNumber];
 }
@@ -55,7 +55,7 @@ function getRandomQuote(quotes){
 
 function printQuote(randomQuote){
   // Get a random quote from the getRandomQuotes function and save it into the variable randomQuote
-  let randomQuote = getRandomQuote(quotes);
+  const randomQuote = getRandomQuote(quotes);
   let html = '';
   // Adding the quote section to the html variable (concatening)
   html += '<p class="quote">' + randomQuote.quote + '</p>';
